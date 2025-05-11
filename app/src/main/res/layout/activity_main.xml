@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#d69803"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Calories Intake and Remaining -->
+    <TextView
+        android:id="@+id/Calories_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/Ypoloipo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Υπόλοιπο"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/Calories_remaining"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/Calories_intake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Ypoloipo_txt" />
+
+
+    <!-- Macronutrients Labels -->
+    <TextView
+        android:id="@+id/Eat_text"
+        android:layout_width="91dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Έφαγες"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Calories_intake" />
+
+    <TextView
+        android:id="@+id/Carbs_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Υδατάνθρακες"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/Eat_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:id="@+id/Ptotein_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Πρωτεΐνες"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/Carbs_Text"
+        app:layout_constraintStart_toEndOf="@id/Carbs_Text"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:id="@+id/Fat_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Λιπαρά"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/Carbs_Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Macronutrient Values -->
+    <TextView
+        android:id="@+id/Carbs_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/Carbs_Text"
+        app:layout_constraintStart_toStartOf="@id/Carbs_Text"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/Protein_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/Carbs_num"
+        app:layout_constraintStart_toStartOf="@id/Ptotein_Text" />
+
+    <TextView
+        android:id="@+id/Fat_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/Carbs_num"
+        app:layout_constraintStart_toStartOf="@id/Fat_Text" />
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/AddFood_Button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Φαγητό"
+        android:onClick="AddFood"
+        android:backgroundTint="#065ac0"
+        app:layout_constraintTop_toBottomOf="@id/Carbs_num"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Calorie_button"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        />
+
+    <Button
+        android:id="@+id/Calorie_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Θερμίδες"
+        android:backgroundTint="#065ac0"
+        app:layout_constraintTop_toTopOf="@id/AddFood_Button"
+        app:layout_constraintStart_toEndOf="@id/AddFood_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="openCalorieInput"/>
+
+    <!-- Program Title moved here -->
+
+    <Button
+        android:id="@+id/Add_Program"
+        android:layout_width="215dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="AddProgram"
+        android:text="Νέο Πρόγραμμα"
+        android:backgroundTint="#065ac0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Programma_gym" />
+
+    <TextView
+        android:id="@+id/Programma_gym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Πρόγραμμα Γυμναστικής"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Calorie_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/program_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Add_Program"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

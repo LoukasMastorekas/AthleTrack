@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/food_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/calories_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories: 0" />
+
+    <TextView
+        android:id="@+id/protein_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protein: 0" />
+
+    <TextView
+        android:id="@+id/fat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fat: 0" />
+
+    <TextView
+        android:id="@+id/carbs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbs: 0" />
+
+    <!-- Εισαγωγή αριθμού -->
+    <EditText
+        android:id="@+id/grams_input"
+        android:layout_width="378dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:hint="Enter grams"
+        android:inputType="number" />
+
+    <!-- Κουμπί + -->
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#065ac0"
+        android:text="+" />
+
+</LinearLayout>

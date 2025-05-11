@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="calories_text" type="id" />
+    <item name="protein_text" type="id" />
+    <item name="fat_text" type="id" />
+    <item name="carbs_text" type="id" />
+    <item name="grams_input" type="id" />
+    <item name="add_button" type="id" />
+</resources>
