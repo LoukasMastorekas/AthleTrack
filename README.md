@@ -1,6 +1,6 @@
-# FitTrack – Calorie Tracker & Workout Planner
+# AthleTrack – Calorie Tracker & Workout Planner
 
-FitTrack is an Android app built with **Java** in **Android Studio** as part of a university project.  
+AthleTrack is an Android app built with **Java** in **Android Studio** as part of a university project.  
 It helps users keep track of their daily calorie intake and plan personalized workout routines – all in one simple interface.
 
 ---
